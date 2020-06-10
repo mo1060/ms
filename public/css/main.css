@@ -1,0 +1,181 @@
+html, body {
+    background-color: #fff;
+    color: #636b6f;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 200;
+    height: 100vh;
+    margin: 0;
+}
+
+.full-height {
+    height: 100vh;
+}
+
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.position-ref {
+    position: relative;
+}
+
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+
+.content {
+    text-align: center;
+}
+
+.title {
+    font-size: 84px;
+}
+
+.links > a {
+    color: #636b6f;
+    padding: 0 25px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.m-b-md {
+    margin-bottom: 30px;
+}
+
+
+.checkboxgroup{
+    display:inline-block;
+    text-align:center;
+}
+.checkboxgroup label {
+    display:block;
+}
+
+
+
+
+
+.slidecontainer {
+    width: 100%; /* Width of the outside container */
+  }
+  
+  /* The slider itself */
+  .slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 60%; /* Full-width */
+    height: 10px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    outline: none;
+    border-radius: 10%; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+  }
+  
+  /* Mouse-over effects */
+  .slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+  }
+  
+  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 20px; /* Set a specific slider handle width */
+    height: 20px;
+    border-radius: 50%;  /* Slider handle height */
+    background: #3490dc; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 20px; /* Set a specific slider handle width */
+    height: 20px; /* Slider handle height */
+    border-radius: 50%; 
+    background: #3490dc; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+
+
+  fieldset > * {
+    vertical-align: middle;
+}
+
+.leftlabel, .rightlabel {
+    display: inline-block;
+    width: 90px;
+    padding: 2px;
+    text-align: center;
+}
+
+.leftlabel {
+    background-color: grey;
+    color: white;
+}
+.rightlabel {
+    background-color: grey;
+    color: white;
+}
+
+.waitleftlabel, .waitrightlabel{
+  display: inline-block;
+  width: 190px;
+  padding: 2px;
+  text-align: center;
+  background-color: grey;
+  color: white;
+  margin: 20px;
+}
+
+.waitleftlabel {
+  float: left;
+}
+
+.waitrightlabel {
+  float: right;
+}
+
+label {
+    display: inline-block;
+    width: 50px;
+}
+
+
+
+/* controls  */
+a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+  }
+  
+  a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .previous {
+    background-color: #f1f1f1;
+    color: black;
+  }
+  
+  .next {
+    background-color: #3490dc;
+    color: white;
+  }
+  
+  .round {
+    border-radius: 50%;
+  }
+
+h5 {
+  border-bottom: 2px solid #ececec;
+}
