@@ -23,6 +23,9 @@ Route::post('/study', 'QuestionaireController@store');
 
 Route::get('/admin', 'QuestionaireController@admin')->middleware('auth');  
 
+Route::get('/instruction', 'QuestionaireController@instruct');  
+
+
 Route::post('/grill', 'QuestionaireController@getData');  
 Route::post('/mixer', 'QuestionaireController@getData');  
 Route::post('/schrank', 'QuestionaireController@getData');  

@@ -41,7 +41,13 @@ class QuestionaireController extends Controller
         $request->session()->put('consent', $request->input('consent'));
 
 
-        return redirect('/grill');
+        //return redirect('/grill');
+        // redirect to instruction page 
+        return redirect('/instruction');
+    }
+
+    public function instruct(){
+        return view('instruction');
     }
 
 
@@ -50,8 +56,8 @@ class QuestionaireController extends Controller
         $age = session('age');
         $gender = session('gender');
        // error_log(session('grill')); 
-        error_log($age);
-        error_log($gender);
+       // error_log($age);
+       // error_log($gender);
 
         return view('grill', [
             'age' => $age,
@@ -214,7 +220,7 @@ class QuestionaireController extends Controller
         $proband->staubsauger = $staubsauger; 
         $proband->pflanze = $pflanze; 
 
-        $proband->save(); 
+       // $proband->save(); 
 
         return view('ende');
     }
@@ -231,7 +237,7 @@ class QuestionaireController extends Controller
         error_log(request('usefulness')); 
         */
 
-        
+        /*
 
         $data = request()->validate([
             'two_days_wait' => 'required',
@@ -251,7 +257,7 @@ class QuestionaireController extends Controller
         
         ]);
 
-        
+        */
         
         $arr = array(
 
@@ -321,7 +327,9 @@ class QuestionaireController extends Controller
                 return redirect('/ende');
         
             }
+
         return redirect('/fragen');
+
     }
 
 }
