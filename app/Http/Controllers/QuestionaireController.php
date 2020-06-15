@@ -220,7 +220,7 @@ class QuestionaireController extends Controller
         $proband->staubsauger = $staubsauger; 
         $proband->pflanze = $pflanze; 
 
-       // $proband->save(); 
+        $proband->save(); 
 
         return view('ende');
     }
@@ -237,7 +237,7 @@ class QuestionaireController extends Controller
         error_log(request('usefulness')); 
         */
 
-        /*
+        
 
         $data = request()->validate([
             'two_days_wait' => 'required',
@@ -257,7 +257,7 @@ class QuestionaireController extends Controller
         
         ]);
 
-        */
+        
         
         $arr = array(
 
