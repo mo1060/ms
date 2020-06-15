@@ -205,7 +205,7 @@ class QuestionaireController extends Controller
         $proband->waschmaschine = $waschmaschine;
         $proband->bett = $bett; 
         $proband->pooltable = $pooltable; 
-        $proband->lamp = $lamp; 
+        $proband->lampe = $lamp; 
         $proband->zelt = $zelt;
         $proband->wohnzimmertisch = $wohnzimmertisch; 
         $proband->federballset = $federballset; 
