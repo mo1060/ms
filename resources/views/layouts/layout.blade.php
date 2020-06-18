@@ -36,6 +36,10 @@
   width: 25%; /* Specific width is required for Firefox. */
 }
 
+h1 {
+    font-size: 0.5em; 
+}
+
 
 }
    </style>
