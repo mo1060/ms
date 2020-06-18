@@ -240,6 +240,7 @@ class QuestionaireController extends Controller
         
 
         $data = request()->validate([
+
             'two_days_wait' => 'required',
             'one_week_wait' => 'required',
             'two_week_wait' => 'required',
@@ -254,10 +255,11 @@ class QuestionaireController extends Controller
             'one_month_wait.required' => 'Bitte gib an, ob du warten würdest.',
 
             'usefulness.required' => 'Bitte gib an, wie nützlich du dieses Produkt findest.',
+
+
         
         ]);
 
-        
         
         $arr = array(
 

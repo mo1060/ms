@@ -28,7 +28,7 @@
                         <div>
                         <fieldset>
                         <span class="leftlabel">Sehr kurz</span>
-                        <input type="range" min="1" max="100" value="1" name="two_day_delivery" class="slider" id="myRange">
+                        <input type="range" min="1" max="100" value="{{ old('two_day_delivery', '1') }}" name="two_day_delivery" class="slider" id="myRange">
                         <span class="rightlabel">Viel zu lang</span>
                         </fieldset>
                         </div>
@@ -43,9 +43,9 @@
 
                     <br>
                         <label for="my_radio_button_id1">Ja</label>
-                        <input type="radio" value="yes" name="two_days_wait" id="my_radio_button_id1" />
+                        <input type="radio" value="yes"  {{ old("two_days_wait") == 'yes' ? 'checked' : '' }}    name="two_days_wait" id="my_radio_button_id1" />
                         <label for="my_radio_button_id2">Nein</label>
-                        <input type="radio" value="no" name="two_days_wait" id="my_radio_button_id2" />
+                        <input type="radio" value="no" {{ old("two_days_wait") == 'no' ? 'checked' : '' }}   name="two_days_wait" id="my_radio_button_id2" />
                     </div>
             </div>
 
@@ -64,7 +64,7 @@
                         <div>
                         <fieldset>
                         <span class="leftlabel">Sehr kurz</span>
-                        <input type="range" min="1" max="100" value="1" name="one_week_delivery" class="slider" id="myRange">
+                        <input type="range" min="1" max="100" value="{{ old('one_week_delivery','1') }}" name="one_week_delivery" class="slider" id="myRange">
                         <span class="rightlabel">Viel zu lang</span>
                         </fieldset>
                         </div>
@@ -80,9 +80,9 @@
 
                     <br>
                         <label for="my_radio_button_id1">Ja</label>
-                        <input type="radio" value="yes" name="one_week_wait" id="my_radio_button_id1" />
+                        <input type="radio" value="yes" {{ old("one_week_wait") == 'yes' ? 'checked' : '' }}   name="one_week_wait" id="my_radio_button_id1" />
                         <label for="my_radio_button_id2">Nein</label>
-                        <input type="radio" value="no" name="one_week_wait" id="my_radio_button_id2" />
+                        <input type="radio" value="no" {{ old("one_week_wait") == 'no' ? 'checked' : '' }} name="one_week_wait" id="my_radio_button_id2" />
                     </div>
             </div>
 
@@ -101,7 +101,7 @@
                         <div>
                         <fieldset>
                         <span class="leftlabel">Sehr kurz</span>
-                        <input type="range" min="1" max="100" value="1" name="two_week_delivery" class="slider" id="myRange">
+                        <input type="range" min="1" max="100" value="{{ old('two_week_delivery', '1') }}" name="two_week_delivery" class="slider" id="myRange">
                         <span class="rightlabel">Viel zu lang</span>
                         </fieldset>
                         </div>
@@ -116,9 +116,9 @@
                     <span style="color:red;">{{ $errors->first('two_week_wait') }}</span>
                     <br>
                         <label for="my_radio_button_id1">Ja</label>
-                        <input type="radio" value="yes" name="two_week_wait" id="my_radio_button_id1" />
+                        <input type="radio" value="yes" {{ old("two_week_wait") == 'yes' ? 'checked' : '' }}  name="two_week_wait" id="my_radio_button_id1" />
                         <label for="my_radio_button_id2">Nein</label>
-                        <input type="radio" value="no" name="two_week_wait" id="my_radio_button_id2" />
+                        <input type="radio" value="no" {{ old("two_week_wait") == 'no' ? 'checked' : '' }}   name="two_week_wait" id="my_radio_button_id2" />
                     </div>
             </div>
 
@@ -135,7 +135,7 @@
                         <div>
                         <fieldset>
                         <span class="leftlabel">Sehr kurz</span>
-                        <input type="range" min="1" max="100" value="1" name="one_month_delivery" class="slider" id="myRange">
+                        <input type="range" min="1" max="100"   value="{{ old('one_month_delivery','1') }}" name="one_month_delivery" class="slider" id="myRange">
                         <span class="rightlabel">Viel zu lang</span>
                         </fieldset>
                         </div>
@@ -149,9 +149,9 @@
                     <span style="color:red;">{{ $errors->first('one_month_wait') }}</span>
                     <br>
                         <label for="my_radio_button_id1">Ja</label>
-                        <input type="radio" value="yes" name="one_month_wait" id="my_radio_button_id1" />
+                        <input type="radio" value="yes" {{ old("one_month_wait") == 'yes' ? 'checked' : '' }} name="one_month_wait" id="my_radio_button_id1" />
                         <label for="my_radio_button_id2">Nein</label>
-                        <input type="radio" value="no" name="one_month_wait" id="my_radio_button_id2" />
+                        <input type="radio" value="no" {{ old("one_month_wait") == 'no' ? 'checked' : '' }} name="one_month_wait" id="my_radio_button_id2" />
                     </div>
             </div>
 
@@ -195,38 +195,36 @@
                     <div id="checkboxes">
                     <div class="checkboxgroup">
                         <label for="my_radio_button_id1">Gar nicht</label>
-                        <input type="radio" name="usefulness" id="my_radio_button_id1"  value="1"/>
+                        <input type="radio" name="usefulness" {{ old("usefulness") == '1' ? 'checked' : '' }} id="my_radio_button_id1"  value="1"/>
                     </div>
                     ---
                     <div class="checkboxgroup">
                         <label for="my_radio_button_id2">2</label>
-                        <input type="radio" name="usefulness" id="my_radio_button_id2" value="2" />
+                        <input type="radio" name="usefulness" {{ old("usefulness") == '2' ? 'checked' : '' }}  id="my_radio_button_id2" value="2" />
                     </div>
                     ---
                     <div class="checkboxgroup">
                         <label for="my_radio_button_id3">3</label>
-                        <input type="radio" name="usefulness" id="my_radio_button_id3" value="3" />
+                        <input type="radio" name="usefulness" {{ old("usefulness") == '3' ? 'checked' : '' }}  id="my_radio_button_id3" value="3" />
                     </div>
                     ---
                     <div class="checkboxgroup">
                         <label for="my_radio_button_id3">4</label>
-                        <input type="radio" name="usefulness" id="my_radio_button_id3" value="4" />
+                        <input type="radio" name="usefulness" {{ old("usefulness") == '4' ? 'checked' : '' }}  id="my_radio_button_id3" value="4" />
                     </div>
                     ---
                     <div class="checkboxgroup">
                         <label for="my_radio_button_id3">5</label>
-                        <input type="radio" name="usefulness" id="my_radio_button_id3" value="5" />
+                        <input type="radio" name="usefulness" {{ old("usefulness") == '5' ? 'checked' : '' }}  id="my_radio_button_id3" value="5" />
                     </div>
                     ---
                     <div class="checkboxgroup">
                         <label for="my_radio_button_id3">Sehr</label>
-                        <input type="radio" name="usefulness" id="my_radio_button_id3" value="6" />
+                        <input type="radio" name="usefulness" {{ old("usefulness") == '6' ? 'checked' : '' }}  id="my_radio_button_id3" value="6" />
                     </div>
                     </div>
             </div>
             </li>
-
-
             </ul>
             <input type="hidden" name="product" value="koffer"> 
             <!-- controls -->
