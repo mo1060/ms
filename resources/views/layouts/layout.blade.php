@@ -20,7 +20,7 @@
     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
     box-sizing: border-box;   }
     label {
-        padding: 5px; 
+        padding: 10px; 
     }
     @media only screen and (max-width: 600px) {
 
@@ -37,7 +37,7 @@
 }
 
 h1 {
-    font-size: 0.5em; 
+    font-size: 14px; 
 }
 
 
