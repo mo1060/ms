@@ -40,6 +40,17 @@ h1 {
     font-size: 14px; 
 }
 
+  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 30px; /* Set a specific slider handle width */
+    height: 30px;
+    border-radius: 50%;  /* Slider handle height */
+    background: #3490dc; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+
 
 }
    </style>
